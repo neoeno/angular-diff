@@ -26,13 +26,13 @@ gulp.task('karma', function() {
 
 /* Build a concat and minified version of the source files */
 gulp.task('build:concat', function () {
-  return gulp.src('src/*.js')
+  return gulp.src('src/diff.filter.js')
     .pipe(concat('angular-diff.js'))
     .pipe(gulp.dest('.'));
 });
 
 gulp.task('build:minify', function () {
-  return gulp.src('src/*.js')
+  return gulp.src('src/diff.filter.js')
     .pipe(ngmin())
     .pipe(uglify())
     .pipe(concat('angular-diff.min.js'))
